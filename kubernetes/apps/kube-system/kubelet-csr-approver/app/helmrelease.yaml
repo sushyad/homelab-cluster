@@ -21,7 +21,7 @@ spec:
     remediation:
       retries: 3
   values:
-    providerRegex: ^(node-1|node-2|node-1|node-1)$
+    providerRegex: ^(node-1|node-2|node-3|node-4)$
     bypassDnsResolution: true
     metrics:
       enable: true

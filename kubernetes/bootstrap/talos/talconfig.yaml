@@ -21,8 +21,7 @@ cniConfig:
 nodes:
   - hostname: "node-1"
     ipAddress: "192.168.40.5"
-    installDiskSelector:
-      serial: "S75BNL0W930309Z"
+    installDisk: "/dev/sda"
     talosImageURL: factory.talos.dev/installer/
     controlPlane: true
     networkInterfaces:
@@ -38,8 +37,7 @@ nodes:
           ip: "192.168.40.20"
   - hostname: "node-2"
     ipAddress: "192.168.40.6"
-    installDiskSelector:
-      serial: "S75BNS0W548962A"
+    installDisk: "/dev/sda"
     talosImageURL: factory.talos.dev/installer/
     controlPlane: true
     networkInterfaces:
@@ -53,10 +51,9 @@ nodes:
             gateway: "192.168.40.1"
         vip:
           ip: "192.168.40.20"
-  - hostname: "node-1"
+  - hostname: "node-3"
     ipAddress: "192.168.40.7"
-    installDiskSelector:
-      serial: "S75BNL0WA24390H"
+    installDisk: "/dev/sda"
     talosImageURL: factory.talos.dev/installer/
     controlPlane: true
     networkInterfaces:
@@ -70,10 +67,9 @@ nodes:
             gateway: "192.168.40.1"
         vip:
           ip: "192.168.40.20"
-  - hostname: "node-1"
+  - hostname: "node-4"
     ipAddress: "192.168.40.8"
-    installDiskSelector:
-      serial: "TPBF2311150020100505"
+    installDisk: "/dev/sda"
     talosImageURL: factory.talos.dev/installer/
     controlPlane: false
     networkInterfaces:
