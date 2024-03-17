@@ -22,7 +22,8 @@ nodes:
   - hostname: "node-1"
     ipAddress: "192.168.40.5"
     installDisk: "/dev/nvme0n1"
-    talosImageURL: ghcr.io/siderolabs/installer/
+    talosImageURL: ghcr.io/siderolabs/installer
+    wipeDisk: true
     controlPlane: true
     networkInterfaces:
       - interface: eth0
@@ -38,7 +39,8 @@ nodes:
   - hostname: "node-2"
     ipAddress: "192.168.40.6"
     installDisk: "/dev/nvme0n1"
-    talosImageURL: ghcr.io/siderolabs/installer/
+    talosImageURL: ghcr.io/siderolabs/installer
+    wipeDisk: true
     controlPlane: true
     networkInterfaces:
       - interface: eth0
@@ -54,7 +56,8 @@ nodes:
   - hostname: "node-3"
     ipAddress: "192.168.40.7"
     installDisk: "/dev/nvme0n1"
-    talosImageURL: ghcr.io/siderolabs/installer/
+    talosImageURL: ghcr.io/siderolabs/installer
+    wipeDisk: true
     controlPlane: true
     networkInterfaces:
       - interface: eth0
@@ -70,7 +73,8 @@ nodes:
   - hostname: "node-4"
     ipAddress: "192.168.40.8"
     installDisk: "/dev/nvme0n1"
-    talosImageURL: ghcr.io/siderolabs/installer/
+    talosImageURL: ghcr.io/siderolabs/installer
+    wipeDisk: true
     controlPlane: false
     networkInterfaces:
       - interface: eth0

@@ -34,9 +34,9 @@ nodes:
     #% if bootstrap_talos.secureboot.enabled %#
     machineSpec:
       secureboot: true
-    talosImageURL: ghcr.io/siderolabs/installer-secureboot/#{ bootstrap_talos.schematic_id }#
+    talosImageURL: ghcr.io/siderolabs/installer-secureboot#{ bootstrap_talos.schematic_id }#
     #% else %#
-    talosImageURL: ghcr.io/siderolabs/installer/#{ bootstrap_talos.schematic_id }#
+    talosImageURL: ghcr.io/siderolabs/installer#{ bootstrap_talos.schematic_id }#
     #% endif %#
     wipeDisk: #{ (item.wipeDisk) | default("true", true) }#
     controlPlane: #{ (item.controller) | string | lower }#
