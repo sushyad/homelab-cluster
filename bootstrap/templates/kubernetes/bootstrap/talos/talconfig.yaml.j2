@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/budimanjojo/talhelper/master/pkg/config/schemas/talconfig.json
 ---
 # renovate: datasource=docker depName=ghcr.io/siderolabs/installer
-talosVersion: v1.6.6
+talosVersion: v1.6.1
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
 kubernetesVersion: v1.29.2
 
@@ -34,13 +34,14 @@ nodes:
     #% if bootstrap_talos.secureboot.enabled %#
     machineSpec:
       secureboot: true
-    talosImageURL: factory.talos.dev/installer-secureboot/#{ bootstrap_talos.schematic_id }#
+    talosImageURL: ghcr.io/siderolabs/installer-secureboot/#{ bootstrap_talos.schematic_id }#
     #% else %#
-    talosImageURL: factory.talos.dev/installer/#{ bootstrap_talos.schematic_id }#
+    talosImageURL: ghcr.io/siderolabs/installer/#{ bootstrap_talos.schematic_id }#
     #% endif %#
+    wipeDisk: #{ (item.wipeDisk) | default("true", true) }#
     controlPlane: #{ (item.controller) | string | lower }#
     networkInterfaces:
-      - interface: eth0
+      - interface: #{ (item.interface) | default("eth0", true) }#
         dhcp: false
         #% if bootstrap_talos.vlan %#
         vlans:

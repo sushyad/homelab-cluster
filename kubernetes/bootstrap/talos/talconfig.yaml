@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/budimanjojo/talhelper/master/pkg/config/schemas/talconfig.json
 ---
 # renovate: datasource=docker depName=ghcr.io/siderolabs/installer
-talosVersion: v1.6.6
+talosVersion: v1.6.1
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
 kubernetesVersion: v1.29.2
 
@@ -21,8 +21,8 @@ cniConfig:
 nodes:
   - hostname: "node-1"
     ipAddress: "192.168.40.5"
-    installDisk: "/dev/sda"
-    talosImageURL: factory.talos.dev/installer/
+    installDisk: "/dev/nvme0n1"
+    talosImageURL: ghcr.io/siderolabs/installer/
     controlPlane: true
     networkInterfaces:
       - interface: eth0
@@ -37,8 +37,8 @@ nodes:
           ip: "192.168.40.20"
   - hostname: "node-2"
     ipAddress: "192.168.40.6"
-    installDisk: "/dev/sda"
-    talosImageURL: factory.talos.dev/installer/
+    installDisk: "/dev/nvme0n1"
+    talosImageURL: ghcr.io/siderolabs/installer/
     controlPlane: true
     networkInterfaces:
       - interface: eth0
@@ -53,8 +53,8 @@ nodes:
           ip: "192.168.40.20"
   - hostname: "node-3"
     ipAddress: "192.168.40.7"
-    installDisk: "/dev/sda"
-    talosImageURL: factory.talos.dev/installer/
+    installDisk: "/dev/nvme0n1"
+    talosImageURL: ghcr.io/siderolabs/installer/
     controlPlane: true
     networkInterfaces:
       - interface: eth0
@@ -69,8 +69,8 @@ nodes:
           ip: "192.168.40.20"
   - hostname: "node-4"
     ipAddress: "192.168.40.8"
-    installDisk: "/dev/sda"
-    talosImageURL: factory.talos.dev/installer/
+    installDisk: "/dev/nvme0n1"
+    talosImageURL: ghcr.io/siderolabs/installer/
     controlPlane: false
     networkInterfaces:
       - interface: eth0
