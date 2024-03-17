@@ -28,16 +28,14 @@ nodes:
     networkInterfaces:
       - interface: eth0
         dhcp: false
-        vlans:
-          - vlanId: 40
-            addresses:
-              - "192.168.40.5/24"
-            mtu: 1500
-            routes:
-              - network: 0.0.0.0/0
-                gateway: "192.168.40.1"
-            vip:
-              ip: "192.168.40.20"
+        addresses:
+          - "192.168.40.5/24"
+        mtu: 1500
+        routes:
+          - network: 0.0.0.0/0
+            gateway: "192.168.40.1"
+        vip:
+          ip: "192.168.40.20"
   - hostname: "node-2"
     ipAddress: "192.168.40.6"
     installDiskSelector:
@@ -47,16 +45,14 @@ nodes:
     networkInterfaces:
       - interface: eth0
         dhcp: false
-        vlans:
-          - vlanId: 40
-            addresses:
-              - "192.168.40.6/24"
-            mtu: 1500
-            routes:
-              - network: 0.0.0.0/0
-                gateway: "192.168.40.1"
-            vip:
-              ip: "192.168.40.20"
+        addresses:
+          - "192.168.40.6/24"
+        mtu: 1500
+        routes:
+          - network: 0.0.0.0/0
+            gateway: "192.168.40.1"
+        vip:
+          ip: "192.168.40.20"
   - hostname: "node-1"
     ipAddress: "192.168.40.7"
     installDiskSelector:
@@ -66,16 +62,14 @@ nodes:
     networkInterfaces:
       - interface: eth0
         dhcp: false
-        vlans:
-          - vlanId: 40
-            addresses:
-              - "192.168.40.7/24"
-            mtu: 1500
-            routes:
-              - network: 0.0.0.0/0
-                gateway: "192.168.40.1"
-            vip:
-              ip: "192.168.40.20"
+        addresses:
+          - "192.168.40.7/24"
+        mtu: 1500
+        routes:
+          - network: 0.0.0.0/0
+            gateway: "192.168.40.1"
+        vip:
+          ip: "192.168.40.20"
   - hostname: "node-1"
     ipAddress: "192.168.40.8"
     installDiskSelector:
@@ -85,14 +79,12 @@ nodes:
     networkInterfaces:
       - interface: eth0
         dhcp: false
-        vlans:
-          - vlanId: 40
-            addresses:
-              - "192.168.40.8/24"
-            mtu: 1500
-            routes:
-              - network: 0.0.0.0/0
-                gateway: "192.168.40.1"
+        addresses:
+          - "192.168.40.8/24"
+        mtu: 1500
+        routes:
+          - network: 0.0.0.0/0
+            gateway: "192.168.40.1"
 
 patches:
   # Configure containerd
