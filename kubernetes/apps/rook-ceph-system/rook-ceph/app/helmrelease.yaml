@@ -23,6 +23,11 @@ spec:
   values:
     ndm:
       enabled: false
+    controllers:
+      rook-ceph:
+        containers:
+          securityContext:
+            allowPrivilegeEscalation: true
   releaseName: rook-ceph
   valuesFrom:
   - kind: ConfigMap
