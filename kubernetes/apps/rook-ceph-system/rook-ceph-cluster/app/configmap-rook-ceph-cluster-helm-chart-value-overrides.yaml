@@ -10,7 +10,7 @@ data:
     # Declare variables to be passed into your templates.
 
     # -- Namespace of the main rook operator
-    operatorNamespace: rook-ceph
+    operatorNamespace: rook-ceph-system
 
     # -- The metadata.name of the CephCluster CR
     # @default -- The same as the namespace
